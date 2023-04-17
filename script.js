@@ -12,16 +12,11 @@ function getComputerChoice() {
 }
 
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
 
-    function capitalize(s) {
-        s1 = s[0].toUpperCase();
-        s2 = s.slice(1).toLowerCase();
-        return s1+s2;
-       }
 
-    playerSelection = capitalize(playerSelection);
-    computerSelection = capitalize(computerSelection);
+    playerSelection = this.class;
+    computerSelection = getComputerChoice();
 
     if (playerSelection === "Rock") {
         if (computerSelection === "Rock") {
@@ -69,7 +64,12 @@ function playRound(playerSelection, computerSelection) {
         return "Invalid playerSelection input";
     }
   }
-   
-const rockBtn = document.querySelector(".rock")
-const paperBtn = document.querySelector(".paper")
-const scissorsBtn = document.querySelector(".scissors")
+ 
+
+const rockBtn = document.querySelector(".Rock");
+const paperBtn = document.querySelector(".Paper");
+const scissorsBtn = document.querySelector(".Scissors");
+
+rockBtn.addEventListener("click",playRound);
+paperBtn.addEventListener("click",playRound);
+scissorsBtn.addEventListener("click",playRound);
