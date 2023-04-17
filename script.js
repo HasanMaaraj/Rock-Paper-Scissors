@@ -73,3 +73,5 @@ const scissorsBtn = document.querySelector(".Scissors");
 rockBtn.addEventListener("click",playRound);
 paperBtn.addEventListener("click",playRound);
 scissorsBtn.addEventListener("click",playRound);
+
+const result = document.querySelector(".result")
